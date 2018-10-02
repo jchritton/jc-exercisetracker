@@ -1,0 +1,48 @@
+{
+  "name": "jc-exercisetracker",
+  "author": {
+    "name": "John Chritton",
+    "email": "jchritton33@gmail.com",
+    "url": "https://github.com/jchritton"
+  },
+  "version": "0.0.1",
+  "description": "An application for tracking users' excercise routines",
+  "private": true,
+  "homepage": "https://jc-exercisetracker.glitch.me/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchritton/jc-exercisetracker"
+  },
+  "bugs": {
+    "url": "https://github.com/jchritton/jc-exercisetracker/issues"
+  },
+  "main": "src/server/index.js",
+  "engines": {
+    "node": "^6"
+  },
+  "scripts": {
+    "start": "nodemon src/server/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "chai": "^4.1.2",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
+  },
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "license": "MIT"
+}
