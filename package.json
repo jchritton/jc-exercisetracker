@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "nodemon src/server/index.js",
-    "test": "mocha test/**/*.test.js --timeout 10000 --reporter nyan --watch"
+    "test": "mocha test/**/*.test.js --timeout 10000 --watch"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

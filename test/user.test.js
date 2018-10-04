@@ -8,7 +8,7 @@ const server = require('../src/server/index.js');
 describe('User', () => {
   it('should return a 200 response', (done) => {
     request(server)
-      .get('/api/exercise/new-user')
+      .post('/api/exercise/new-user')
       .set('Accept', 'application/json')
       .expect(200, done);
   });
