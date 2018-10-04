@@ -32,6 +32,10 @@ app.use(express.static(path.join(__dirname, '..', '..', 'public')));
 app.use('/', index);
 
 // Start server
-app.listen(port, () => {
-  console.log(`Express server is listening on port ${port}`);
-});
+if (!module.parent) {
+  app.listen(port, () => {
+    console.log(`Express server is listening on port ${port}`);
+  });
+}
+
+module.exports = app;

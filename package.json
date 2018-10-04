@@ -21,14 +21,16 @@
     "node": "^6"
   },
   "scripts": {
-    "start": "nodemon src/server/index.js"
+    "start": "nodemon src/server/index.js",
+    "test": "mocha test/**/*.test.js --timeout 10000 --reporter nyan --watch"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "mongodb": "^3.1.4",
-    "mongoose": "^5.2.10"
+    "mongoose": "^5.2.10",
+    "randomstring": "^1.1.5"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -37,12 +39,16 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "prettier-eslint": "^8.8.2",
+    "supertest": "^3.3.0"
   },
   "keywords": [
     "node",
     "glitch",
-    "express"
+    "express",
+    "mocha",
+    "supertest"
   ],
   "license": "MIT"
 }
