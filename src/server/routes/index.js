@@ -44,6 +44,8 @@ router.post('/api/exercise/add', (req, res) => {
     }).catch((err) => {
       res.json(err);
     });
+  } else if (req.body.userId && !checkId(req.body.userId).id) {
+    res.json({ error: 'Exercise not added. This user does not exist!' });
   } else {
     // Exercise not added if userId and description not valid
     res.json({ error: 'Exercise not added. Please POST a valid userId and description!' });
@@ -51,13 +53,22 @@ router.post('/api/exercise/add', (req, res) => {
 });
 
 router.get('/api/exercise/log', (req, res) => {
+  const existingUser = checkId(req.body.userId);
   res.statusCode = 200;
 
   // Check for existing userId
+  if (req.query.userId && existingUser.id) {
+    // Search range of dates
+    res.json(Exercise.find({
+      userId: existingUser.id,
+      date: { $gte: req.query.from, $lte: req.query.to }
+    }).limit(req.query.limit));
+  }
+});
 
-  // Search range of dates
-
-  // Only return the first LIMIT values
+const checkId = userId => User.findOne({ id: userId }, (err, existingId) => {
+  if (err) return err;
+  return existingId === null ? { error: 'This is not a valid user' } : existingId;
 });
 
 module.exports = router;
