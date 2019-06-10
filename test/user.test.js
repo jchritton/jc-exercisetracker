@@ -20,7 +20,9 @@ describe('User', () => {
       .set('Accept', 'application/json')
       .expect(200)
       .end((err, res) => {
-        if (err) { done(err); }
+        if (err) {
+          done(err);
+        }
         expect(res.body.userName).to.equal('John');
         done();
       });

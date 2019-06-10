@@ -1,54 +1,54 @@
 {
-  "name": "jc-exercisetracker",
-  "author": {
-    "name": "John Chritton",
-    "email": "jchritton33@gmail.com",
-    "url": "https://github.com/jchritton"
-  },
-  "version": "0.0.1",
-  "description": "An application for tracking users' excercise routines",
-  "private": true,
-  "homepage": "https://jc-exercisetracker.glitch.me/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jchritton/jc-exercisetracker"
-  },
-  "bugs": {
-    "url": "https://github.com/jchritton/jc-exercisetracker/issues"
-  },
-  "main": "src/server/index.js",
-  "engines": {
-    "node": "^6"
-  },
-  "scripts": {
-    "start": "nodemon src/server/index.js",
-    "test": "mocha test/**/*.test.js --timeout 10000 --watch"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "mongodb": "^3.1.12",
-    "mongoose": "^5.2.10",
-    "randomstring": "^1.1.5"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "chai": "^4.2.0",
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.9",
-    "prettier-eslint": "^8.8.2",
-    "supertest": "^3.4.2"
-  },
-  "keywords": [
-    "node",
-    "glitch",
-    "express",
-    "mocha",
-    "supertest"
-  ],
-  "license": "MIT"
+	"name": "jc-exercisetracker",
+	"author": {
+		"name": "John Chritton",
+		"email": "jchritton33@gmail.com",
+		"url": "https://github.com/jchritton"
+	},
+	"version": "0.0.1",
+	"description": "An application for tracking users' excercise routines",
+	"private": true,
+	"homepage": "https://jc-exercisetracker.glitch.me/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jchritton/jc-exercisetracker"
+	},
+	"bugs": {
+		"url": "https://github.com/jchritton/jc-exercisetracker/issues"
+	},
+	"main": "src/server/index.js",
+	"engines": {
+		"node": "^6"
+	},
+	"scripts": {
+		"start": "nodemon src/server/index.js",
+		"test": "mocha test/**/*.test.js --timeout 10000 --watch"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"dotenv": "^8.0.0",
+		"express": "^4.17.1",
+		"mongodb": "^3.2.7",
+		"mongoose": "^5.5.14",
+		"randomstring": "^1.1.5"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"chai": "^4.2.0",
+		"eslint": "^5.16.0",
+		"eslint-config-airbnb-base": "^13.1.0",
+		"eslint-plugin-import": "^2.17.3",
+		"mocha": "^6.1.4",
+		"nodemon": "^1.19.1",
+		"prettier-eslint": "^8.8.2",
+		"supertest": "^4.0.2"
+	},
+	"keywords": [
+		"node",
+		"glitch",
+		"express",
+		"mocha",
+		"supertest"
+	],
+	"license": "MIT"
 }
